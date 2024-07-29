@@ -66,7 +66,7 @@ element.style {
 textarea {
     width: 100%;
     padding: 0.75rem;
-    border: 1px solid #ccc;
+    border: 1px solid #f89f64;
     border-radius: 5px;
     font-size: 1rem;
 }
@@ -83,7 +83,7 @@ textarea {
 }
 
 .submit_btn:hover {
-    background-color: #444;
+    background-color: #e87e1b;
 }
 
 .checkbox_group {
