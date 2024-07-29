@@ -1,0 +1,116 @@
+<html>
+  <head>
+    <title>Creating Blog Page</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/blog.css" />
+    <link rel="stylesheet" href="css/project.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+  </head>
+
+  <body>
+
+  <!-- Nav -->
+
+    <nav class="navbar">
+      <ul class="navbar-ul">
+        <div class="navbar-left">
+          <li>
+            <img src="assets/dumbways.png" class="navbar-logo" />
+          </li>
+          <li>
+            <a href="index.html" class="navbar-link"> Home </a>
+          </li>
+          <li>
+            <a href="my project.html" class="navbar-link active"> My Project </a>
+          </li>
+          <li>
+            <a href="testimonial.html" class="navbar-link"> Testimonial </a>
+          </li>
+        </div>
+        <div class="navbar-right">
+          <li>
+            <a href="contact.html" class="navbar-contact-btn"> Contact Me </a>
+          </li>
+          <button id="hamburger-button"  onclick="toggleHamburger()" >
+            <i class="fa-solid fa-bars fa-2x"></i>
+          </button>
+        </div>
+      </ul>
+    </nav>
+    <div class="hamburger-container hide ">
+      <a href="index.html" class="hamburger-nav-link "> Home </a>
+      <a href="my project.html" class="hamburger-nav-link hamburger-active"> My Project </a>
+      <a href="testimonial.html" class="hamburger-nav-link"> Testimonial </a>
+      <a href="contact.html" class="hamburger-nav-link"> Contact Me </a>
+    </div>
+
+<!-- Project Form -->
+
+    <h1 class="titel">Add Project</h1>
+    <section id="project__form" class="form_section">
+      <form class="container__form">
+        <div class="form_group">
+          <label for="projectname">Project Name</label>
+          <input type="text" id="name" name="name" required="">
+        </div>
+        <div class="date_wrapper">
+          <div class="form_group">
+            <label for="start_date">Start Date</label>
+            <input type="date" id="start_date" name="start_date" required="">
+          </div>
+          <div class="form_group">
+            <label for="end_date">End Date</label>
+            <input type="date" id="end_date" name="end_date" required="">
+          </div>
+        </div>
+        <div class="form_group">
+          <label for="description">Description</label>
+          <textarea id="description" name="description" rows="5" required=""></textarea>
+        </div>
+        <div class="form_group">
+          <label>Technologies</label>
+          <div class="checkbox_1" style="display: block">
+            <div class="checkbox_group">
+              <input type="checkbox" id="nodejs" name="technologies" value="nodejs">
+              <label for="nodejs">Node.js</label>
+            </div>
+            <div class="checkbox_group">
+              <input type="checkbox" id="nextjs" name="technologies" value="nextjs">
+              <label for="nextjs">Next.js</label>
+            </div>
+          </div>
+          <div class="checkbox_2" style="display: block">
+            <div class="checkbox_group">
+              <input type="checkbox" id="typescript" name="technologies" value="typescript">
+              <label for="typescript">TypeScript</label>
+            </div>
+            <div class="checkbox_group">
+              <input type="checkbox" id="reactjs" name="technologies" value="reactjs">
+              <label for="reactjs">React.js</label>
+            </div>
+          </div>
+        </div>
+        <div class="form_group">
+          <label for="image_upload">Upload Image</label>
+          <input type="file" id="image_upload" name="image_upload" accept="image/*" required="">
+        </div>
+        <div class="form_group">
+          <button type="submit" class="submit_btn">Submit</button>
+        </div>
+      </form>
+    </section>
+    <section id="card__project">
+      <div class="txt">
+        <h2><B>MY PROJECT</B> </h2>
+      </div>
+      <div class="card__project__container"></div>
+    </section>
+
+    <script src="js/nav.js"></script>
+  </body>
+</html>
