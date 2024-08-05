@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Personal Web</title>
+    <link rel="stylesheet" href="../assets/css/index.css" />
+    <link rel="stylesheet" href="../assets/css/nav.css" />
+    <link rel="stylesheet" href="../assets/css/home.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+  </head>
+
+  <body>
+    <script src="./learning/async/4.ajax.js"></script>
+    <nav class="navbar">
+      <ul class="navbar-ul">
+        <div class="navbar-left">
+          <li>
+            <img src="../assets/logo/dumbways.png" class="navbar-logo" />
+          </li>
+          <li>
+            <a href="index" class="navbar-link active"> Home </a>
+          </li>
+          <li>
+            <a href="project" class="navbar-link"> Add Project </a>
+          </li>
+          <li>
+            <a href="testimonial" class="navbar-link"> Testimonial </a>
+          </li>
+        </div>
+        <div class="navbar-right">
+          <li>
+            <a href="contact" class="navbar-contact-btn"> Contact Me </a>
+          </li>
+          <button id="hamburger-button" onclick="toggleHamburger()">
+            <i class="fa-solid fa-bars fa-2x"></i>
+          </button>
+        </div>
+      </ul>
+    </nav>
+    <div class="hamburger-container hide ">
+      <a href="index" class="hamburger-nav-link hamburger-active">
+        Home
+      </a>
+      <a href="project" class="hamburger-nav-link"> Add Project </a>
+      <a href="testimonial" class="hamburger-nav-link"> Testimonial </a>
+      <a href="contact" class="hamburger-nav-link"> Contact Me </a>
+    </div>
+
+    <section class="container">
+      <div class="left">
+        <img
+          src="../assets/image/fabian.jpg"
+          alt="Fabian Farrel"
+          style="
+            width: 220px;
+            height: 285px;
+            object-fit: cover;
+            border-radius: 20px;
+          "
+        />
+        <h1>Fabian Farrel</h1>
+        <p>
+         Student at Dumbways
+        </p>
+      </div>
+
+      <div class="right">
+        <h2>Welcome to my hut!</h2>
+        Hi im Fabian Farrel, im 18 years old and it's a pleasure to meet you all. I come from BangkaBelitung in the town PangkalPinang, 
+              and I'm very excited to be here today on BATCH 56 of DumbWays. My interests include in Design, Coding, Economy
+              and i have work freelance for eastons for a short period of time. I look forward to engaging with you all and learning together.
+
+        <div class="skill">
+          <div  style="margin-top: 25px;">
+            <h2>Javascript</h2>
+            <p>
+              in the javascript programming language, I am still a beginner and have to learn more
+            </p>
+          </div>
+          <div  style="margin-top: 25px;">
+            <h2>Github</h2>
+            <p>
+              This is my GitHub account, where you can check my coding via the repository
+            </p>
+          </div>
+
+          <div  style="margin-top: 25px;">
+            <h2>Html and CSS</h2>
+            <p>
+              For HTML and CSS, I know enough to be able to create a website and other stuff
+            </p>
+          </div>
+        </div>
+
+        <div class="social-media">
+          <h2 style="margin-top: 35px;">Found Me on</h2>
+          <i class="fa-brands fa-linkedin" onclick="location.href='https://www.linkedin.com/in/fabian-farrel/'" ></i>
+          <i class="fa-brands fa-github" onclick="location.href='https://github.com/FabianFarrel/'"></i>
+          <i class="fa-brands fa-instagram" onclick="location.href='https://www.instagram.com/fbnfarrel/'"></i>
+        </div>
+        
+        <button class="btn btn-color-2" 
+        style=" border: rgb(53, 53, 53) 0.1rems solid;
+        cursor: pointer;
+        background:rgb(53, 53, 53);
+        color: white;border: 
+        rgb(25, 25, 25) 0.1rem solid ;
+        border-radius: 20px;
+        padding: 5px;
+        margin-top: 10px; " 
+    onclick="window.location.href='./assets/FABIAN FARREL CV.pdf'" > Download CV</button>
+
+      </div>
+    </section>
+    
+    <section id="card__project">
+      <div class="txt">
+        <h2><B>MY PROJECT</B> </h2>
+      </div>
+      <div class="card__project__container"></div>
+    </section>
+    
+    <script src="js/nav.js"></script>
+    <SCript src="js/project.js"></SCript>
+  </body>
+</html>

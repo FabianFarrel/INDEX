@@ -1,0 +1,25 @@
+.label-style {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.input-style {
+    resize: vertical; 
+    padding: 5px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 1px 1px 1px 0px rgb(49, 49, 49);
+}
+
+.btn-submit {
+    padding: 5px;
+    background-color: orangered;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    width: 100px;
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+}

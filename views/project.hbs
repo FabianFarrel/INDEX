@@ -1,0 +1,145 @@
+<html>
+  <head>
+    <title>Creating Blog Page</title>
+    <link rel="stylesheet" href="../assets/css/index.css" />
+    <link rel="stylesheet" href="../assets/css/nav.css" />
+    <link rel="stylesheet" href="../assets/css/blog.css" />
+    <link rel="stylesheet" href="../assets/css/project.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+  </head>
+
+  <body>
+
+  <!-- Nav -->
+
+    <nav class="navbar">
+      <ul class="navbar-ul">
+        <div class="navbar-left">
+          <li>
+            <img src="../assets/logo/dumbways.png" class="navbar-logo" />
+          </li>
+          <li>
+            <a href="/" class="navbar-link"> Home </a>
+          </li>
+          <li>
+            <a href="project" class="navbar-link active"> Add Project </a>
+          </li>
+          <li>
+            <a href="testimonial" class="navbar-link"> Testimonial </a>
+          </li>
+        </div>
+        <div class="navbar-right">
+          <li>
+            <a href="contact" class="navbar-contact-btn"> Contact Me </a>
+          </li>
+          <button id="hamburger-button"  onclick="toggleHamburger()" >
+            <i class="fa-solid fa-bars fa-2x"></i>
+          </button>
+        </div>
+      </ul>
+    </nav>
+    <div class="hamburger-container hide ">
+      <a href="/" class="hamburger-nav-link "> Home </a>
+      <a href="project" class="hamburger-nav-link hamburger-active"> Add Project </a>
+      <a href="testimonial" class="hamburger-nav-link"> Testimonial </a>
+      <a href="contact" class="hamburger-nav-link"> Contact Me </a>
+    </div>
+
+<!-- Project Form -->
+
+     <div class="blog">
+         <div class="blog-form">
+            <div class="form-container">
+               <form action="/project" method="POST">
+                  <h1>ADD MY PROJECT</h1>
+                  <div>
+                     <label for="input-blog-title">Title</label>
+                     <input id="input-blog-title" name="title" />
+                  </div>
+                  <div>
+                     <label for="input-blog-content">Content</label>
+                     <textarea
+                        id="input-blog-content"
+                        name="content"
+                        style="resize: vertical;"
+                     ></textarea>
+                  </div>
+              
+                  <div>
+                     <label>Upload Image</label>
+                     <div class="input-blog-image-group">
+                        <label for="input-blog-image">
+                           <p>Attach File</p>
+                           <img src="../assets/logo/file.png" alt="file" />
+                        </label>
+                        <input
+                           type="file"
+                           id="input-blog-image"
+                           name="image"
+                           hidden
+                        />
+                     </div>
+                  </div>
+                  <div class="button-group">
+                     <button>Submit</button>
+                  </div>
+               </form>
+            </div>
+         </div>
+
+         <hr class="line" />
+         <div id="" class="blog-list">
+            {{#each data}}
+               <div class="blog-list-item">
+                  <div class="blog-image">
+                     <img src="${blogs[index].image}" alt="" />
+                  </div>
+                  <div class="blog-content">
+                     <div class="btn-group">
+                        <a
+                           class="btn-edit btn-secondary"
+                           href="/edit-project/{{this.id}}"
+                           style="text-decoration: none; color: black;"
+                           role="button"
+                        >Edit Post</a>
+                        <a
+                           href="/delete-project/{{this.id}}"
+                           class="btn-post"
+                           role="button"
+                           style="text-decoration: none; color: white;"
+                        >Delete Post</a>
+                     </div>
+                     <h1>
+                        <a
+                           href="/project-detail/{{this.id}}"
+                           target="_blank"
+                        >{{this.title}}</a>
+                     </h1>
+                     <div class="project-blog-content">
+                        {{this.createdAt}}
+                        |
+                        {{this.author}}
+                     </div>
+                     <p style="width: 100%;">
+                        {{this.content}}
+                     </p>
+
+                  </div>
+               </div>
+            {{/each}}
+            
+         </div>
+      </div>
+
+    <!--Myproject-->
+
+
+    <script src="../assets/js/nav.js"></script>
+    
+
+  </body>
+</html>
